@@ -1,0 +1,64 @@
+/******************************************************
+ ** pricing.less
+ ** 
+ ** LESS for Pricing Table.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/***************
+ * Pricing Page
+ ***************/
+.pricing {
+  .plan {
+    text-shadow: 0 1px rgba(255,255,255,.8);
+    background: @white-color;
+    border: 1px solid @medium-dark-gray;
+    color: @medium-black;
+    position: relative;
+    .transition(all .6s);
+    h3 {
+      font-size: 20px;
+      font-weight: normal;
+      padding: 30px;
+      margin: -20px -20px 50px -20px;
+      background-color: @light-gray;
+      background-image: -ms-linear-gradient(@white-color, @light-gray);
+      background-image: -moz-linear-gradient(@white-color, @light-gray);
+      background-image: -o-linear-gradient(@white-color, @light-gray);
+      background-image: -webkit-linear-gradient(@white-color, @light-gray);
+      background-image: linear-gradient(@white-color, @light-gray);
+      span {
+        display: block;
+        font: bold 20px/40px Georgia, Serif;
+        color: @metalic-gray;
+        background: @white-color;
+        border: 5px solid @white-color;
+        height: 50px;
+        width: 100%;
+        max-width: 150px;
+        margin: 20px auto -50px;
+        .borderRadius(12px);
+        -webkit-box-shadow: 5px 5px 20px @medium-dark-gray inset, 8px 0 5px @dark-gray inset;
+        -moz-box-shadow: 5px 5px 20px @medium-dark-gray inset, 8px 0 5px @dark-gray inset;
+        -o-box-shadow: 5px 5px 20px @medium-dark-gray inset, 8px 0 5px @dark-gray inset;
+        -ms-box-shadow: 5px 5px 20px @medium-dark-gray inset, 8px 0 5px @dark-gray inset;
+        box-shadow: 5px 5px 20px @medium-dark-gray inset, 8px 0 5px @dark-gray inset;
+      }
+    }
+    ul {
+      li {
+        border-top: 1px solid @medium-dark-gray;
+        padding: 10px 0;
+      }
+    }
+    .signup {
+      padding: 8px 20px;
+      color: @white-color;
+      border-radius: 5px !important;
+    }
+    &:hover {
+      .transform(scale(1.050));
+      z-index: 2;
+    }
+  }
+}

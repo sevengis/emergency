@@ -1,0 +1,105 @@
+/******************************************************
+ ** profile.less
+ ** 
+ ** LESS for Profile Page.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/***************
+ * Profile page
+ ***************/
+.profile {
+  .profile-block {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    .profile-cover {
+      background: url(../../images/profile/profile-cover.jpg) center no-repeat;
+      background-size: 100% auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .profile-image {
+    position: absolute;
+    border: 5px solid @white-color;
+    border-radius: 5px 5px 0 0;
+    bottom: -5px;
+    left: 35px;
+    .profile-avatar {
+      height: 120px;
+    }
+  }
+  .profile-info {
+    position: absolute;
+    bottom: 10%;
+    left: 200px;
+    color: @white-color;
+  }
+  .nav.nav-pills {
+    >li.active {
+      >a {
+        color: @white-color;
+        background-color: @theme-color;
+        &:focus {
+          color: @white-color;
+          background-color: @theme-color;
+        }
+        &:hover {
+          color: @white-color;
+          background-color: @theme-color;
+        }
+      }
+    }
+    >li {
+      >a {
+        border-radius: 0;
+        color: @theme-color;
+      }
+    }
+  }
+  .activity {
+    .activity-header {
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      &:before {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .activity-header-image {
+        float: left;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    .activity-content {
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      &:before {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+  .photos {
+    img {
+      height: 200px;
+      width: 100%;
+    }
+  }
+}

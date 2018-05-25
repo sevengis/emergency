@@ -1,0 +1,28 @@
+/******************************************************
+ ** print.less
+ ** 
+ ** LESS for Print Button.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/*************************************
+ * Remove Breadcrumb, Sidebar, Footer
+ *************************************/
+@media print
+{
+  .breadcrumb-page-title {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .main-wrapper {
+    margin-left: 0;
+  }
+}

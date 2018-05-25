@@ -1,0 +1,316 @@
+/******************************************************
+ ** horizontal-timeline.scss
+ ** 
+ ** LESS for Horizontal Timeline.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/**********************
+ * Horizontal Timeline
+ **********************/
+.cd-horizontal-timeline {
+  opacity: 0;
+  margin: 2em auto;
+  @include transition(opacity 0.2s);
+  &::before {
+    content: 'mobile';
+    display: none;
+  }
+  .timeline {
+    position: relative;
+    height: 100px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .events-wrapper {
+    position: relative;
+    height: 100%;
+    margin: 0 40px;
+    overflow: hidden;
+  }
+  &::after {
+    content: '';
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    right: 0;
+    background-image: -webkit-linear-gradient( right , $extra-light-gray);
+    background-image: linear-gradient(to left, $extra-light-gray);
+  }
+  &::before {
+    content: '';
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    left: 0;
+    background-image: -webkit-linear-gradient( left , $extra-light-gray);
+    background-image: linear-gradient(to right, $extra-light-gray);
+  }
+  .filling-line {
+
+    /* this is used to create the green line filling the timeline */
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $theme-color;
+    @include transform(scaleX(0));
+    @include transform-origin(left center);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .events {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 49px;
+    height: 2px;
+
+    /* width will be set using JavaScript */
+    background: $medium-dark-gray;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    a {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      text-align: center;
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+      color: $medium-black;
+      @include transform(translateZ(0));
+      &::after {
+
+        /* this is used to create the event spot */
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+        bottom: -5px;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        border: 2px solid $medium-dark-gray;
+        background-color: $extra-light-gray;
+        -webkit-transition: background-color 0.3s, border-color 0.3s;
+        -moz-transition: background-color 0.3s, border-color 0.3s;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+      &.selected {
+        pointer-events: none;
+        &::after {
+          background-color: $theme-color;
+          border-color: $theme-color;
+        }
+      }
+      &.older-event {
+        &::after {
+          border-color: $theme-color;
+        }
+      }
+    }
+  }
+  .events-content {
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+    overflow: hidden;
+    @include transition(height 0.4s);
+    li {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 0 5%;
+      opacity: 0;
+      @include transform(translateX(-100%));
+      @include animation-duration(0.4s);
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+    }
+    li {
+      &.selected {
+
+        /* visible event content */
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        @include transform(translateX(0));
+      }
+    }
+    li {
+      &.enter-right {
+        @include animation-name(cd-enter-right);
+      }
+    }
+    li {
+      &.leave-right {
+        @include animation-name(cd-enter-right);
+        -webkit-animation-direction: reverse;
+        -moz-animation-direction: reverse;
+        animation-direction: reverse;
+      }
+    }
+    li {
+      &.enter-left {
+        @include animation-name(cd-enter-left);
+      }
+    }
+    li {
+      &.leave-left {
+        @include animation-name(cd-enter-left);
+        -webkit-animation-direction: reverse;
+        -moz-animation-direction: reverse;
+        animation-direction: reverse;
+      }
+    }
+    li > * {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 2.6rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    em {
+      display: block;
+      margin: 10px auto;
+      line-height: 1.6;
+      &::before {
+        content: '- ';
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      color: $dark-gray;
+      line-height: 1.6;
+    }
+  }
+}
+.cd-timeline-navigation {
+  a {
+    position: absolute;
+    top: 33%;
+    bottom: auto;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: 2px solid $medium-dark-gray;
+    text-indent: 4.5px;
+    &.next { text-indent: 5.5px; }
+    &.prev { left: 0; }
+    &.next { right: 0; }
+    &.inactive {
+      cursor: not-allowed;
+      & {
+        &::after {
+          background-position: 0 -16px;
+        }
+      }
+    }
+  }
+}
+.cd-horizontal-timeline {
+
+  /* show the timeline after events position has been set (using JavaScript) */
+  &.loaded { opacity: 1; }
+}
+
+@media only screen and (min-width: 1100px) {
+  .cd-horizontal-timeline {
+    margin: 6em auto;
+    &::before {
+
+      /* never visible - this is used in jQuery to check the current MQ */
+      content: 'desktop';
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-horizontal-timeline {
+    .events-content {
+      h2 {
+        font-size: 7rem;
+      }
+      em {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  } 
+}
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}

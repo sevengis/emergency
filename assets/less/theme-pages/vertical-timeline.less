@@ -1,0 +1,307 @@
+/******************************************************
+ ** vertical-timeline.less
+ ** 
+ ** LESS for Vertical Timeline
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+@-webkit-keyframes "vertical-bounce-1" {
+  0% {
+    opacity: 0;
+    .transform(scale(0.5));
+  }
+  60% {
+    opacity: 1;
+    .transform(scale(1.2));
+  }
+  100% {
+    .transform(scale(1));
+  }
+}
+@-moz-keyframes "vertical-bounce-1" {
+  0% {
+    opacity: 0;
+    .transform(scale(0.5));
+  }
+  60% {
+    opacity: 1;
+    .transform(scale(1.2));
+  }
+  100% {
+    .transform(scale(1));
+  }
+}
+@keyframes "vertical-bounce-1" {
+  0% {
+    opacity: 0;
+    .transform(scale(0.5));
+  }
+  60% {
+    opacity: 1;
+    .transform(scale(1.2));
+  }
+  100% {
+    .transform(scale(1));
+  }
+}
+
+/* inverse bounce effect on even content blocks */
+@-webkit-keyframes "vertical-bounce-2" {
+  0% {
+    opacity: 0;
+    .transform(translateX(-100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+@-moz-keyframes "vertical-bounce-2" {
+  0% {
+    opacity: 0;
+    .transform(translateX(-100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+@keyframes "vertical-bounce-2" {
+  0% {
+    opacity: 0;
+    .transform(translateX(-100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+@-webkit-keyframes "vertical-bounce-2-inverse" {
+  0% {
+    opacity: 0;
+    .transform(translateX(100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(-20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+@-moz-keyframes "vertical-bounce-2-inverse" {
+  0% {
+    opacity: 0;
+    .transform(translateX(100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(-20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+@keyframes "vertical-bounce-2-inverse" {
+  0% {
+    opacity: 0;
+    .transform(translateX(100px));
+  }
+  60% {
+    opacity: 1;
+    .transform(translateX(-20px));
+  }
+  100% {
+    .transform(translateX(0));
+  }
+}
+.vertical-timeline {
+  position: relative;
+  padding: 2em 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    height: 100%;
+    width: 4px;
+    background: @medium-dark-gray;
+  }
+}
+.vertical-timeline-block {
+  margin: 2em 0;
+  position: relative;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.vertical-timeline-img {
+  .borderRadius(50%);
+  .box-shadow(0 0 0 4px @white-color);
+  height: 60px;
+  left: -10px;
+  position: absolute;
+  top: 0;
+  width: 60px;
+  i {
+    display: block;
+    left: 10%;
+    margin-left: -12px;
+    margin-top: -12px;
+    position: relative;
+    top: 45%;
+    color: @white-color;
+    text-align: center;
+  }
+}
+.vertical-timeline-content {
+  background: @white-color;
+  border-radius: 0.25em;
+  .box-shadow(0 3px 0 @light-gray@medium-dark-gray);
+  margin-left: 60px;
+  padding: 1em;
+  position: relative;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  p {
+    line-height: 1.6;
+    margin: 1em 0;
+  }
+  .vertical-read-more {
+    display: inline-block;
+  }
+  .vertical-date {
+    display: inline-block;
+    float: left;
+    opacity: 0.7;
+    padding: 0.8em 0;
+  }
+  &::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent @white-color transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 7px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 100%;
+    top: 16px;
+    width: 0;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    &::before {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+  .vertical-timeline-block {
+    margin: 4em 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:nth-child(even) {
+      .vertical-timeline-content {
+        float: right;
+        &::before {
+          top: 24px;
+          left: auto;
+          right: 100%;
+          border-color: transparent;
+          border-right-color: white;
+        }
+        .vertical-read-more {
+          float: right;
+        }
+        .vertical-date {
+          left: auto;
+          right: 122%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .vertical-timeline-img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    .transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations {
+    .vertical-timeline-img.is-hidden {
+      visibility: hidden;
+    }
+    .vertical-timeline-img.bounce-in {
+      visibility: visible;
+      .animation(vertical-bounce-1 0.6s);
+    }
+    .vertical-timeline-content.is-hidden {
+      visibility: hidden;
+    }
+    .vertical-timeline-content.bounce-in {
+      visibility: visible;
+      .animation(vertical-bounce-2 0.6s);
+    }
+    .vertical-timeline-block {
+      &:nth-child(even) {
+        .vertical-timeline-content.bounce-in {
+          .animation(vertical-bounce-2-inverse 0.6s);
+        }
+      }
+    }
+  }
+  .vertical-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+    &::before {
+      border-color: transparent transparent transparent @white-color;
+      left: 100%;
+      top: 24px;
+    }
+    .vertical-read-more {
+      float: left;
+    }
+    .vertical-date {
+      font-size: 1rem;
+      left: 122%;
+      position: absolute;
+      top: 6px;
+      width: 100%;
+    }
+  }
+}

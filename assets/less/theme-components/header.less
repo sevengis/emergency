@@ -1,0 +1,348 @@
+/******************************************************
+ ** header.less
+ ** 
+ ** LESS for Admin Panel Header. 
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/*********
+ * Header
+ *********/
+.header {
+  .menu-toggle {
+    background-color: transparent;
+    border:none;
+    font-size: 24px;
+    padding: 3px 13px 0 13px;
+    display: none;
+    color: @sidebar-secondary-font-color;
+    left: 0;
+  }
+  .logo {
+    width: 230px;
+    height: 50px;
+    padding: 5px 0 0 0;
+    background: @sidebar-background-color;
+    .transition(left 200ms ease-out);
+    a {
+      h2 {
+        margin: 0 0 0 50px;
+        font-family: 'Maven Pro', sans-serif;
+        color: @theme-color;
+      }
+    }
+  }
+  .navbar {
+    border:none !important;
+  }
+  .navbar-lg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: @header-background-color;
+    border-radius: 0;
+    color: @sidebar-secondary-font-color;
+    height: 170px;
+    max-height: 50px;
+    .transition(all 0.2s linear);
+    z-index: 998;
+    margin: 0 0 0 250px;
+    .nav-block {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      top: 0px;
+    }
+    .setting-block {
+      height: 100%;
+      display: none;
+      .top-block {
+        height: 50px;
+        padding-left: 251px;
+        .menu-item {
+          display: inline-block;
+          padding: 5px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .navbar-lg {
+    .open {
+      max-height: 170px;
+      .setting-block {
+        display: block;
+      }
+    }
+  }
+  .nav-menu-list {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    .notice-label {
+      position: absolute;
+      right: 5px;
+      text-align: center;
+      font-size: 9px;
+      line-height: 0.9;
+      padding: 2px 3px;
+      top: 10px;
+    }
+    ul {
+      >li {
+        >a {
+          >span {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    &:hover {
+      color: @sidebar-font-color;
+    }
+  }
+  .nav-profile {
+    .nav-link {
+      display: block;
+      padding: 12px 12px 14px 12px !important;
+      color: @header-nav-icon-color;
+    }
+  }
+  .nav-link {
+    display: block;
+    padding: 15px 12px;
+    color: @header-nav-icon-color;
+    &:hover {
+      opacity: 0.9;
+      background-color: @nav-link-background-color;
+      color: @header-nav-icon-active-color;
+    }
+    &:focus {
+      opacity: 0.9;
+      background-color: @nav-link-background-color;
+      color: @header-nav-icon-active-color;
+    }
+  }
+  &.fixed-navbar {
+    .navbar-lg {
+      position: fixed;
+    }
+  }
+}
+
+/****************************
+ * Navbar notification style
+ ****************************/
+.notification-dropdown {
+  .list-block {
+    max-height: 200px;
+    padding-left: 0;
+    width: 250px;
+    overflow: hidden;
+    .box-sizing(border-box);
+    li {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid @medium-dark-gray;
+      a {
+        color: @metalic-gray;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        span {
+          padding-left: 10px;
+        }
+      }
+      &:hover {
+        background: #F6F6F6;
+        opacity: 0.9;
+      }
+      &:focus {
+        background: #F6F6F6;
+        opacity: 0.9;
+      }
+    }
+  }
+  .header {
+    cursor: pointer;
+    line-height: 20px;
+    color: @metalic-gray;
+    border-bottom: 1px solid @medium-dark-gray;
+    text-align: left;
+    padding: 3px 10px;
+    font-size: 13px;
+  }
+  .navbar-footer {
+    text-align: center;
+    font-size: 11px;
+    cursor: pointer;
+    line-height: 20px;
+    color: @metalic-gray;
+  }
+}
+
+/**************************
+ * Settings menu in Navbar
+ **************************/
+.settings-menu {
+  background: @header-background-color;
+  position: absolute;
+  left: 40%;
+  right: 0;
+  top: 50px;
+  z-index: 99;
+  margin: 0 auto;
+  width: auto;
+  max-width: 1810px;
+  display: none;
+  color: @theme-setting-primary-font-color;
+  border: 1px solid @theme-setting-border-color;
+  overflow-y: auto;
+  .settings-header {
+    display: inline-block;
+    border-bottom: 1px solid @theme-setting-border-color;
+    div {
+      display: table-cell;
+    }
+  }
+  .setting-box {
+    color: @theme-setting-secondary-font-color;
+    background-color: @sidebar-r-border-color;
+  }
+}
+
+.settings-menu-fixed {
+  position: fixed !important;
+}
+
+/*****************
+ * Navbar profile
+ *****************/
+.nav-profile {
+  .nav-link {
+    span {
+      &.active{
+        color: @theme-color;
+        left: 35px;
+        position: absolute;
+        top: 30px;
+      }
+    }
+  }
+  .dropdown-menu {
+    background: @header-background-color none repeat scroll 0 0;
+    color: @header-nav-profile-font-color;
+    border-top: 1px solid @sidebar-r-border-color;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    .borderRadius(0px);
+    left: -100px !important;
+    margin: 45px auto 20px auto;
+    width: 163%;
+    h5 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
+    span {
+      &.active {
+        color: @theme-color;
+        font-size: 20px;
+        left: 150px;
+        position: absolute;
+        top: 60px;
+      }
+    }
+    .menu-links {
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid @sidebar-r-border-color;
+      color: @header-nav-profile-font-color;
+      &:hover {
+        background: @nav-link-background-color none repeat scroll 0 0;
+        border-left: 2px solid @theme-hover-color;
+        color: @header-nav-icon-active-color;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+/********************************
+ * Media query for maximum 767px
+ ********************************/
+@media (max-width: 767px) {
+  .header {
+    .logo {
+      .box-shadow(none);
+      background-color: @header-background-color;
+      a {
+        h2 {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  .navbar-lg {
+    .nav-block { padding-left: 0px !important; }
+  }
+  .nav-profile {
+    .dropdown-menu {
+      left: -160px !important;
+      min-width: 210px;
+      span {
+        &.active {
+          color: @theme-color;
+          font-size: 20px;
+          left: 118px;
+          position: absolute;
+          top: 60px;
+        }
+      }
+    }
+  }
+}
+
+/********************************
+ * Media query for maximum 460px
+ ********************************/
+@media (max-width: 460px) {
+  .header {
+    .menu-toggle {
+      padding: 3px 10px 0 10px;
+    }
+    .logo {
+      width: 190px;
+    }
+  }
+  .header {
+    .nav-profile {
+      .nav-link {
+        padding: 12px 5px 14px 5px !important;
+      }
+    }
+    .nav-link {
+      padding: 12px 5px 17px 5px;
+    }
+  }
+  .nav-profile {
+    .dropdown-menu {
+      left: -170px !important;
+      min-width: 210px;
+      span {
+        &.active {
+          color: @theme-color;
+          font-size: 20px;
+          left: 118px;
+          position: absolute;
+          top: 60px;
+        }
+      }
+    }
+  }
+}

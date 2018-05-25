@@ -1,0 +1,66 @@
+/*******************************************************
+ ** strawberry-light-theme _variables.scss
+ ** 
+ ** LESS variables for Strawberry Light Theme.
+ ** Developer: Ranpariya - The Development Lab - India
+ *******************************************************/
+
+/*************************
+ * Strawberry Light Theme
+ *************************/
+
+@import "../common-variables.scss";
+
+/*******************************
+ * Theme Configuration variables
+ *******************************/
+$theme-color: #ED174C;
+$theme-light-color: lighten($theme-color, 7%);
+$theme-hover-color: darken($theme-color, 10%);
+
+/***********************
+ * Left side menu style
+ ***********************/
+$sidebar-background-color: #1e1e1e; // sidebar background color
+$sidebar-font-color: #909190; // sidebar font color
+$sidebar-primary-font-color: #ccc; // sidebar font primary color
+$sidebar-secondary-font-color: #ccc; // sidebar font secondary color
+$sidebar-hz-menu-font-color: #fff; // sidebar horizontal menu font color
+$sidebar-hz-menu-active-font-color: #fff; // sidebar horizontal menu active font color
+$sidebar-active-color: #2C2B2B; // sidebar active color
+$sidebar-sub-menu-background-color: #1e1e1e; // sidebar sub menu background color
+$sidebar-border-color: #2C2B2B; // sidebar border right color
+$sidebar-element-color: #1e1e1e; // sidebar form element color
+$sidebar-horizal-menu-shadow: inset 0px 5px 16px -8px rgba(0,0,0,1); // sidebar-horizal-menu-shadow
+$sidebar-sidebar-menu-shadow: inset 0px 0px 19px -1px rgba(0,0,0,0.5); // sidebar-sidebar-menu-shadow
+
+/************************
+ * Right side menu style
+ ************************/
+$sidebar-r-nav-icon-color: #1e1e1e; // right sidebar nav icon color
+$sidebar-r-nav-active-icon-color: #fff; // right sidebar tab(navbar) icon active color
+$sidebar-r-border-color: #f1f1f1; // right sidebar border color
+$sidebar-r-background-color: #fff; // right sidebar background color
+$sidebar-r-chat-message-from-me-color: #b7b7b7; // right sidebar chat message from me color
+$sidebar-r-message-icon-color: #fff;// right sidebar message icon color
+$sidebar-r-font-color: #6E6E6E; // right sidebar font color
+$sidebar-r-secondary-font-color: #909190; // right sidebar secondary font color
+$sidebar-r-chat-message-color: #fff; // right sidebar chat message color
+$sidebar-r-box-shadow: #8a8a8a; // right sidebar box shadow
+
+/*********************
+ * Theme Setting Menu
+ *********************/
+$theme-setting-primary-font-color: #1e1e1e; // Top setting menu primary color
+$theme-setting-secondary-font-color: #2C2B2B; // Top setting menu secondary color
+$theme-setting-border-color: #ccc; // Top setting menu border color
+
+/***************
+ * Header style
+ ***************/
+$header-nav-icon-color: #1e1e1e; // right sidebar nav header icon secondary color
+$header-nav-icon-active-color: #fff; // right sidebar nav header icon active color
+$header-nav-profile-font-color: #1e1e1e; // nav header profile font color
+$header-background-color: #fff; // header background color
+$header-inner-shadow: rgba(0, 0, 0, 0.75); // header logo inner shadow
+$nav-link-background-color: #ED174C; // Top nav link background color

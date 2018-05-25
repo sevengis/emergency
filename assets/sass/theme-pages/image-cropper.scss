@@ -1,0 +1,47 @@
+/******************************************************
+ ** image-cropper.scss
+ ** 
+ ** LESS for Image Cropper
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/*************************
+ * Cropper / image editor 
+ *************************/
+.image-cropper {
+  .docs-preview { margin-right: -16px; }
+  .img-container {
+    & > img { max-width: 100%; }
+  }
+  .img-preview {
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    overflow: hidden;
+    & > img { max-width: 100%; }
+    &.preview-lg {
+      height: 143px;
+      width: 255px;
+    }
+    &.preview-md {
+      height: 72px;
+      width: 128px;
+    }
+    &.preview-sm {
+      height: 41px;
+      width: 72px;
+    }
+    &.preview-xs {
+      height: 24px;
+      width: 40px;
+      margin-right: 0;
+    }
+  }
+  .docs-cropped {
+    .modal-body {
+      >canvas {
+        max-width: 100%;
+      }
+    }
+  }
+}

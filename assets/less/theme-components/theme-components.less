@@ -1,0 +1,360 @@
+/*************************************************************
+ ** theme-components.less
+ ** 
+ ** LESS for various small-small components of the theme like
+ ** section, Footer, Ribbon, Breadcrumb, etc..
+ ** Developer: Ranpariya - The Development Lab - India
+ *************************************************************/
+
+/*******************************
+ * Section and Section Tab box.
+ *******************************/
+@font-face {
+  font-family:"MuseoSans-700";
+  src: url("./../fonts/MuseoSans_700.otf");
+}
+.section {
+  .box-shadow(0 1px 1px rgba(0,0,0,0.1));
+  background-color: @white-color;
+  height: 100%;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 3px;
+  position: relative;
+  font-family: @Roboto !important;
+  .section-header {
+    min-height: 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid @light-gray;
+    padding: 5px 10px;
+    h4 {
+      color: @metalic-gray;
+      font-family: @open-sans;
+      font-weight: 300;
+      margin: 5px 0;
+      display: inline-block;
+    }
+    h5 {
+      color: @metalic-gray;
+    }
+  }
+  .section-body {
+    padding: 5px 10px 10px 10px;
+    color: @metalic-gray;
+  }
+  .section-footer {
+    border-top: 1px solid @light-gray;
+    padding: 5px 10px;
+    min-height: 40px;
+    margin-top: 10px;
+  }
+  &.tab-content {
+    border: 1px solid #ddd;
+    border-top: 0px;
+    border-radius: 0px;
+    margin: 0;
+  }
+}
+
+/*********
+ * Footer
+ *********/
+.footer {
+  bottom: 0px;
+  color: @dark-gray;
+  background-color: @white-color;
+  border-top: 1px solid @light-gray;
+  .transition(padding 200ms ease-out);
+  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: 230px;
+  &.fixed {
+    position: fixed;
+  }
+}
+
+/**********************
+ * Side corner ribbons
+ **********************/
+.ribbon {
+  .transition(all .3s ease-in-out);
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; 
+  height: 75px;
+  text-align: right;
+  span {
+    font-weight: bold;
+    color: @white-color;
+    text-transform: uppercase;
+    line-height: 20px;
+    .transform(rotate(45deg));
+    width: 100px;
+    display: block;
+    background: linear-gradient(@info-border-color 0%, @info-color 100%);
+    .box-shadow(0 3px 10px -5px rgba(0, 0, 0, 1));
+    position: absolute;
+    top: 19px;
+    right: -21px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid @info-color;
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid @info-color;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid transparent;
+      border-right: 3px solid @info-color;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid @info-color;
+    }
+  }
+  &.ribbon-info {
+    span {
+      background: linear-gradient(@info-border-color 0%, @info-color 100%);
+      &::before {
+        border-left: 3px solid @info-color;
+        border-top: 3px solid @info-color;
+      }
+      &::after {
+        border-right: 3px solid @info-color;
+        border-top: 3px solid @info-color;
+      }
+    }
+  }
+  &.ribbon-success {
+    span {
+      background: linear-gradient(@success-border-color 0%, @success-color 100%);
+      &::before {
+        border-left: 3px solid @success-color;
+        border-top: 3px solid @success-color;
+      }
+      &::after {
+        border-right: 3px solid @success-color;
+        border-top: 3px solid @success-color;
+      }
+    }
+
+  }
+  &.ribbon-danger {
+    span {
+      background: linear-gradient(@danger-border-color 0%, @danger-color 100%);
+      &::before {
+        border-left: 3px solid @danger-color;
+        border-top: 3px solid @danger-color;
+      }
+      &::after {
+        border-right: 3px solid @danger-color;
+        border-top: 3px solid @danger-color;
+      }
+    }
+  }
+  &.ribbon-theme {
+    span {
+      background: @theme-color;
+      &::before {
+        border-left: 3px solid @theme-color;
+        border-top: 3px solid @theme-color;
+      }
+      &::after {
+        border-right: 3px solid @theme-color;
+        border-top: 3px solid @theme-color;
+      }
+    }
+  }
+}
+
+/*************************
+ * Custom nav pills menu
+ *************************/
+.nav {
+  &.nav-pills {
+    &.nav-pills-menu {
+      li {
+        border-bottom: 1px solid @light-gray;
+        border-radius: 0px;
+        margin: 0;
+        &:last-of-type { border: none; }
+        & > a { border-radius: 0; color: @dark-gray;}
+        &.active-pills { background: @light-gray }
+      }
+    }
+  }
+}
+
+/****************
+ * Vertical Tabs
+ ****************/
+.vertical-tabs {
+  border-bottom: none;
+  border-right: 1px solid @medium-dark-gray;
+  min-width: 85px;
+  li {
+    float: none;
+    margin-right: -1px;
+    a {
+      border-radius: 4px 0 0 4px;
+      margin-right: 0;
+      display:block;
+    }
+    &.active {
+      a {
+        border-bottom-color: @medium-dark-gray;
+        border-right-color: transparent;
+      }
+    }
+  }
+}
+
+/****************************************************************
+ * Color Schemes block.
+ * NOTE: Never usualable in real work. Developed for theme demo.
+ ****************************************************************/
+.color-schemes {
+  a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    .transition(all .2s);
+    border: 1px solid #404040;
+
+    /******************
+     * For Dark Themes
+     ******************/
+    &.strawberry-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #851A35 50%, #ED174C 100%);
+    }
+    &.teal-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #1B6C5C 50%, #18BA9B 100%);
+    }
+    &.fresh-apple-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #497125 50%, #74C52C 100%);
+    }
+    &.blueberry-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #22647F 50%, #26aae0 100%);
+    }
+    &.orange-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #8B392E 50%, #F9553E 100%);
+    }
+    &.almond-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #885127 50%, #F38431 100%);
+    }
+    &.lime-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #806A14 50%, #e2b60b 100%);
+    }
+    &.elderberry-theme {
+      background: linear-gradient(to right, #1E1E1E 0%, #4B3269 50%, #7847b5 100%);
+    }
+
+    /*******************
+     * For Light Themes
+     *******************/
+    &.strawberry-light-theme {
+      background: linear-gradient(to right, #ED174C 0%, #F68BA5 50%, #FFFFFF 100%);
+    }
+    &.teal-light-theme {
+      background: linear-gradient(to right, #18BA9B 0%, #8BDCCD 50%, #FFFFFF 100%);
+    }
+    &.fresh-apple-light-theme {
+      background: linear-gradient(to right, #74C52C 0%, #B9E295 50%, #FFFFFF 100%);
+    }
+    &.blueberry-light-theme {
+      background: linear-gradient(to right, #26aae0 0%, #92D4EF 50%, #FFFFFF 100%);
+    }
+    &.orange-light-theme {
+      background: linear-gradient(to right, #F9553E 0%, #FCAA9E 50%, #FFFFFF 100%);
+    }
+    &.almond-light-theme {
+      background: linear-gradient(to right, #F38431 0%, #F9C198 50%, #FFFFFF 100%);
+    }
+    &.lime-light-theme {
+      background: linear-gradient(to right, #e2b60b 0%, #F0DA85 50%, #FFFFFF 100%);
+    }
+    &.elderberry-light-theme {
+      background: linear-gradient(to right, #7847b5 0%, #BBA3DA 50%, #FFFFFF 100%);
+    }
+  }
+}
+
+/*******************
+ * Breadcrumb Style
+ *******************/
+.breadcrumb-page-title {
+  .box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: @Roboto;
+  }
+  .breadcrumb {
+    text-transform: capitalize;
+  }
+}
+
+/************************
+ * Todo lists (Dashboard)
+ ************************/
+.todo-lists {
+  ul {
+    padding: 0 10px;
+    li {
+      border-bottom: 1px solid @medium-dark-gray;
+      color: @dark-gray;
+      margin: 5px;
+      padding: 10px;
+      label {
+        font-weight: normal;
+        text-decoration: none;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    li {
+      &.active {
+        label {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
+/*******************
+ * PDF Viewer Style
+ *******************/
+.pdf-viewer {
+  height: 600px;
+  width: 100%;
+}
+
+/*********************************
+ * Media query for maximum 460px
+ *********************************/
+@media (max-width: 460px) {
+  .breadcrumb-page-title {
+    h1 {
+      font-size: 20px;
+    }
+    .breadcrumb {
+      padding: 0;
+    }
+  }
+}

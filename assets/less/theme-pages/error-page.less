@@ -1,0 +1,87 @@
+/******************************************************
+ ** error-page.less
+ ** 
+ ** LESS for Error Pages such as 400, 500 Pages.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/**************
+ * Error pages
+ **************/
+&.error-page {
+  font-family: "MuseoSans-700", Helvetica,Arial,Verdana,sans-serif;
+  font-smoothing: antialiased;
+  font-weight: normal;
+  background: #151618 !important;
+  background-size: 100%;
+  background-position: center;
+  color: #FFF;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+
+  .error-cn {
+    opacity: 0; /* Page Loader */
+  }
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+    font-size: 22px;
+  }
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-size: 200px;
+    margin: -30px 0 20px 0;
+  }
+  p {
+    line-height: 1.6em;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+  }
+  a {
+    .transition(color 0.2s ease-out);
+    text-decoration: none;
+    color: @white-color;
+    &:hover {
+      color: @medium-dark-gray;
+      text-decoration: none;
+    }
+  }
+  .logo {
+    margin-top: 30px;
+    width: 150px;
+    visibility: visible;
+    .animation-duration(2s);
+  }
+  .btn-white {
+    border: 1px solid @white-color;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 30px 30px;
+    padding: 15px 35px;
+    text-decoration: none;
+  }
+  .footer-content {
+    a {
+      padding: 3px;
+      font-size: 18px;
+    }
+  }
+  .content-page {
+    padding-top: 10%;
+  }
+}
+
+/********************************
+ * Media query for maximum 460px
+ ********************************/
+@media (max-width: 460px) {
+  &.error-page {
+    h2 {
+      font-size: 120px !important;
+    }
+  }
+}

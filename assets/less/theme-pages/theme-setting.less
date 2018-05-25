@@ -1,0 +1,76 @@
+/******************************************************
+ ** theme-setting.less
+ ** 
+ ** LESS for Theme Setting Menu.
+ ** NOTE: Not Usable in real work. Developed for
+ ** Demonstration purpose.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/**************************************************
+ * Theme Setting (Auth pages)
+ **************************************************/
+.theme-setting-dropdown-menu {
+  .dropdown-menu {
+    left: auto !important;
+    &.animated {
+      -webkit-animation-duration: 0.55s;
+      animation-duration: 0.55s;
+      -webkit-animation-timing-function: ease;
+      animation-timing-function: ease;
+    }
+  }
+}
+.theme-setting-icon {
+  right: 0;
+  top: 200px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 555555;
+  position: fixed;
+  border-radius: 3px 0 0 3px !important;
+}
+.theme-setting-menu {
+  background-color: rgba(0,0,0,0.8);
+  right: 0;
+  top: 235px !important;
+  width: 190px;
+  z-index: 555555;
+  position: fixed;
+  border-radius: 3px 0 0 3px !important;
+  li {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10% !important;
+    .transition(all 0.2s ease-in-out);
+    &:hover {
+      .transform(scale(1.1));
+    }
+    &.strawberry-theme {
+      background: #ed174c;
+    }
+    &.teal-theme {
+      background: #18BA9B;
+    }
+    &.fresh-apple-theme {
+      background: #74C52C;
+    }
+    &.blueberry-theme {
+      background: #26aae0;
+    }
+    &.orange-theme {
+      background: #f9553e;
+    }
+    &.almond-theme {
+      background: #F38431;
+    } 
+    &.lime-theme {
+      background: #e2b60b;
+    }
+    &.elderberry-theme {
+      background: #7847b5;
+    }
+  }
+}

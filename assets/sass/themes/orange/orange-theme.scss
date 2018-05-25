@@ -1,0 +1,25 @@
+/*******************************************************
+ ** orange-theme.scss
+ ** 
+ ** Main LESS file for Orange Theme Admin Pages.
+ ** Developer: Ranpariya - The Development Lab - India
+ *******************************************************/
+
+/*********************************************
+ * Generalize CSS.
+ * These can use for global component styling
+ *********************************************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body.orange-theme {
+  @import "./_variables.scss";
+  @import "../../app.scss";
+}

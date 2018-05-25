@@ -1,0 +1,121 @@
+/******************************************************
+ ** app.scss
+ ** 
+ ** Custom less for Ranpariya Theme.
+ ** Imports all LESS files.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+ 
+/*************************************************
+ * Generalize CSS.
+ * These can be used for global component styling
+ *************************************************/
+
+@import "_mixin.scss";
+@import "helper-classes.scss";
+@import "theme-components/theme-components.scss";
+@import "theme-components/thirdPartyLib-overwrite.scss";
+@import "theme-components/sidebars.scss";
+@import "theme-components/right-sidebar.scss";
+@import "theme-components/boxed-layout.scss";
+@import "theme-components/header.scss";
+@import "theme-components/image-grid.scss";
+@import "theme-components/scroll-top.scss";
+@import "theme-components/print.scss";
+@import "theme-pages/profile.scss";
+@import "theme-pages/mail-box.scss";
+@import "theme-pages/loader-icons.scss";
+@import "theme-pages/contact.scss";
+@import "theme-pages/pricing.scss";
+@import "theme-pages/vertical-timeline.scss";
+@import "theme-pages/horizontal-timeline.scss";
+@import "theme-pages/social-buttons.scss";
+@import "theme-pages/e-commerce.scss";
+@import "theme-pages/file-manager.scss";
+@import "theme-pages/widgets.scss";
+@import "theme-pages/text-editors.scss";
+@import "theme-pages/dashboards.scss";
+@import "theme-pages/theme-setting.scss";
+@import "theme-pages/agile-board.scss";
+@import "theme-pages/scrollspy.scss";
+@import "theme-pages/material-cards.scss";
+@import "theme-pages/image-cropper.scss";
+@import "theme-pages/error-page.scss";
+
+/*************************
+ * Wrapper for whole page
+ *************************/
+.wrapper {
+  opacity: 0; /* Page Loader */
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: $sidebar-background-color;
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:before {
+    display: table;
+    content: " ";
+  }
+  .main-header-toggle {
+    position: absolute;
+    color: $sidebar-secondary-font-color;
+  }
+
+  &.toggle-sidebar {
+    .sidebar {
+      &.sidebar-v1 { left: 0px; }
+    }
+  }
+}
+
+/***************************************
+ * Main Wrapper for actual content area
+ ***************************************/
+.main-wrapper {
+  min-height: 100%;
+  margin-top: 50px;
+  padding:0 15px 70px 15px;
+  @include transition(all 0.3s ease-in-out 0s);
+
+  &.page-animated {
+    @include animation(zoomIn 1.2s);
+  }
+}
+
+/*******************
+ * Fixed width page
+ *******************/
+.fixed-width-page, .section-page {
+  .section, .section-body {
+    min-height: 500px;
+    h2 {
+      margin-top: 230px
+    }
+  }
+}
+
+/*******************************
+ * Removes background from
+ * Logo area in full width page.
+ *******************************/
+&.full-width-page {
+  .main-wrapper, .footer { margin-left: 0; }
+  .logo {
+    background: $header-background-color;
+    a {
+      h2 {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+  &.boxed-layout {
+    .footer{
+      &.fixed {
+        padding-left: 0;
+      }
+    }
+  }
+}

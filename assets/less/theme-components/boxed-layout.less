@@ -1,0 +1,97 @@
+/************************************************************
+ ** Boxed-layout.less
+ ** 
+ ** LESS for Boxed Layout. Usable only if admin panel is used
+ ** in boxed layout.
+ ** Developer: Ranpariya - The Development Lab - India
+ ************************************************************/
+
+/***************
+ * Boxed layout
+ ***************/
+@boxed-layout-width: 1180px;
+
+&.boxed-layout {
+  max-width: @boxed-layout-width;
+  margin: 0 auto;
+  .box-shadow(0px 0px 15px 2px @dark-gray);
+  background: @white-color url(../../images/fixed-width-bg.png);
+  background-attachment: fixed;
+  .header.fixed-navbar {
+    .navbar-lg {
+      width: @boxed-layout-width;
+      margin: 0 auto !important;
+    }
+  }
+  .footer {
+    max-width: @boxed-layout-width;
+    &.fixed {
+      margin: 0 auto;
+      padding-left: 230px;
+      width: @boxed-layout-width;
+    }
+  }
+  .sidebar-collapse {
+    .footer {
+      margin-left: 50px;
+      &.fixed {
+        margin: 0 auto;
+        max-width: 1180px;
+        padding-left: 50px;
+      }
+    }
+  }
+  .main-header {
+    max-width: @boxed-layout-width;
+    margin: 0 auto !important;
+  }
+  .content-wrapper {
+    padding: 5px 10px 0 30px;
+  }
+  .settings-menu {
+    position: absolute;
+  }
+  .right-sidebar { z-index: 9; }
+}
+
+/*********************************
+ * Media query for maximum 1180px
+ *********************************/
+@media (min-width: 1180px) {
+  &.boxed-layout {
+    .dashboard-widgets-box {
+      width: 100%;
+    }
+    .dashboard-widgets-box-half {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  &.boxed-layout {
+    .footer {
+      &.fixed {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  &.boxed-layout {
+    &.toggle-sidebar {
+      .footer {
+        &.fixed {
+          padding-left: 230px;
+        }
+      }
+    }
+    .footer {
+      &.fixed {
+        width: 100% !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}

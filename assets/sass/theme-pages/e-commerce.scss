@@ -1,0 +1,66 @@
+/******************************************************
+ ** e-commerce.scss
+ ** 
+ ** LESS for E-Commerce Admin Pages.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/**********************
+ * Product Detail Page
+ **********************/
+.product-detail {
+  .product-image-list {
+    img {
+      cursor: pointer;
+      &:first-child { margin-left: 0; }
+    }
+  }
+  .price {
+    span {
+      display: inline-block;
+      padding: 0 5px 0 5px;
+    }
+  }
+  .product-img {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+/*************************************************
+ * Product grid primary & secondary (Prpduct Box)
+ *************************************************/
+.product-grid-primary, .product-grid-secondary {
+  background: $white-color;
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.1));
+  @include transition(all .2s ease-in-out);
+  .product-img {
+    position: relative;
+    .product-like {
+      position: absolute;
+      right: 15px;
+      bottom: 10px;
+      color: $white-color;
+      cursor: pointer;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .product-detail {
+    @include box-shadow(inset -2px 18px 12px -16px rgba(0,0,0,0.3));
+    width: 100%;
+    color: $metalic-gray;
+    padding: 10px 10px 10px 20px;
+  }
+}
+
+/**************************
+ * Media query maximum 460
+ **************************/
+@media (max-width: 460px) {
+  .cart-image {
+    width: 100% !important;
+  }
+}

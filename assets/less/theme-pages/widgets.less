@@ -1,0 +1,131 @@
+/******************************************************
+ ** widgets.less
+ ** 
+ ** LESS for Social and other widgets.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/****************
+ * Other widgets
+ ****************/
+.other-widgets-box {
+  background-color: #ed174c;
+}
+
+/*****************
+ * Social widgets
+ *****************/
+.social-widgets {
+  .widgets-body {
+    li {
+      display: none !important;
+      &.active {
+        opacity: 1;
+        display: block !important;
+      }
+    }
+  }
+  .widgets-counter {
+    padding: 20px;
+    line-height: 1;
+    width: 100%;
+    .widgets-icon {
+      i {
+        display: block;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+        .borderRadius(50%);
+        background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        -ms-background-clip: padding;
+        -o-background-clip: padding;
+      }
+    }
+    .widgets-label {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    span {
+      display: block;
+      line-height: 1.4;
+    }
+  }
+  .progress-widgets {
+    .progessbar {
+      background: rgba(0, 0, 0, 0.1);
+      span {
+        position: absolute;
+        background: @white-color;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .social-media {
+    div {
+      display : table-cell;
+      vertical-align: middle;
+    }
+  }
+  /******************
+   * Profile widgets
+   ******************/
+  .profile {
+    .social-profile {
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      .profile-avatar {
+        height: 120px;
+      }
+    }
+    .profile-widgets {
+      border: 3px solid @white-color;
+      border-radius: 50%;
+      top: 18%;
+    }
+    .profile-widgets2 {
+      border: 3px solid @white-color;
+      border-radius: 5px 5px 0 0;
+      bottom: -5px;
+    }
+    .info-block {
+      margin-top: 40px;
+    }
+    &.profile-cover-bg {
+      background: @theme-color url(../../images/login_box_bg.png);
+    }
+  }
+}
+
+/******************
+ * Weather widgets
+ ******************/
+.weather-icon {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.weather-small-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.mexico-weather-widgets-img {
+  background: url(../../images/mexico.jpg) center no-repeat;
+  background-size: cover;
+}
+.brazil-weather-widgets-img {
+  background: url(../../images/brazil.jpg) center no-repeat;
+  background-size: cover;
+  table{
+    tr {
+      td {
+        border-top: 1px solid #ada6a6;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+/******************************************************
+ ** mail-box.less
+ ** 
+ ** LESS for Mail Box.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+.mail {
+  .text-yellow { color: @warning-color !important; }
+  .text-yellow-o { border-color: yellow; color: @white-color !important; }
+  .compose-btn {
+    border-radius: 2px;
+    height: 40px;
+    padding: 7px;
+  }
+  ul {
+    li {
+      a { color: @dark-gray; }
+    }
+  }
+  .box-footer {
+    background-color: @white-color;
+    border-radius: 0px 0px 3px 3px; 
+    border-top: 1px solid @inbox-box-footer;
+    min-height: 55px;
+  }
+  .search {
+    input[type=text] {
+      width: 150px;
+      .transition(width .3s ease-in-out);
+      &:focus{ width: 250px; }
+      &:hover { width: 250px; }
+    }
+  }
+  table {
+    >tbody {
+      >tr {
+        >td {
+          position: relative;
+          padding: 10px;
+          &:first-child {
+            padding-left: 15px;
+          }
+          a {
+            color: @metalic-gray;
+          }
+        }
+      }
+    }
+  }
+}
+.checkbox-toggle { padding: 5px 10px;  }
+
+/************
+ * Read mail
+ ************/
+.readmail {
+  p {
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    margin-top: 3px;
+  }
+  .download-btn {
+    padding: 0px 5px !important;
+  }
+  .filebox {
+    border: 1px solid @file-box-border-color;
+    float: left;
+    height: 220px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    width: 250px;
+    .file {
+      height: 150px;
+      text-align: center;
+      border-bottom: 1px solid @file-box-border-color; 
+      i { padding-top: 40px; }
+      img { height: 148px; }
+    }
+    .filename { height: 70px; }
+  }
+}
+
+/*********************
+ * Compose Mail style 
+ *********************/
+.mail {
+  .compose-mail {
+    .box-shadow(-6px 0px 10px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    .header {
+      width: 100%;
+      background: @white-color;
+      color: @mail-font-color;
+      border-bottom: 1px solid @mail-option-border;
+      .name {
+        padding: 15px 0 0 15px;
+        display: inline-block;
+      }
+      .action {
+        display: inline-block;
+        padding: 15px 15px 0 5px;
+      }
+    }
+    .compose-message {
+      background: @white-color;
+      .mail-option {
+        padding: 5px 10px;
+        border-bottom: 1px solid @mail-option-border;
+        min-height: 45px;
+        .form-group {
+          margin-bottom: 0;
+          .form-control {
+            padding-left: 10px;
+            border: 0px solid;
+            border-radius: 0;
+            .box-shadow(none);
+            .transition(none);
+          }
+        }
+      }
+      .form-control:focus {
+        .box-shadow(none);
+        border-color: none;
+        outline: none;
+      }
+      .message {
+        height: 300px;
+        overflow-x: hidden;
+      }
+      .mail-option {
+        .heading {
+          height: 35px;
+          color: @mail-font-color;
+          padding: 8px 0 0 10px;
+          .tool {
+            background: @medium-dark-gray;
+            margin-left: 10px;
+            color: @medium-black;
+            height: 27px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+    .mail-footer {
+      width: 100%;
+      border-top: 1px solid @mail-option-border;
+      background: @white-color;
+      padding: 5px;
+      .right-block {
+        padding-right: 15px;
+        padding-top: 2px;
+        .send { width: 90px; height: 35px; }
+        .send:focus, .tool { color: @white-color; }
+      }
+    }
+  }
+  .note-editor.note-frame.panel {
+    border: none;
+    .box-shadow(none);
+    .close { display: none; }
+    .note-toolbar.panel-heading {
+      border: none;
+      .box-shadow(none);
+      position: absolute;
+      z-index: 10;
+      top: 25px;
+      left: 0px;
+      background: @mail-option-border;
+      .box-shadow(0px 0px 6px rgba(0, 0, 0, 0.3));
+    }
+    .note-toolbar:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 15px 15px 15px;
+      border-color: @mail-option-border transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -15px;
+      left: 110px;
+    }
+  }
+  .note-resizebar { display: none; }
+}
+
+/*********************
+ * Selectize dropdown
+ *********************/
+.selectize-control.selectize-email.multi {
+  .selectize-input { border: none; .box-shadow(none); }
+  .selectize-dropdown {
+    .email-list {
+      height: 50px;
+      .label { color: @medium-black; }
+      .caption { padding-left: 50px; }
+    }
+    .icon {
+      height: 30px;
+      width: 30px;
+      background: @medium-dark-gray;
+      float: left;
+      margin-right: 10px;
+      margin-top: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+.selectize-control.plugin-remove_button {
+  [data-value] {
+    .remove {
+      border-left-color: @white-color;
+      color: @white-color;
+    }
+  }
+  [data-value].active {
+    .remove {
+      border-left-color: @white-color;
+      color: @white-color;
+    }
+  }
+}

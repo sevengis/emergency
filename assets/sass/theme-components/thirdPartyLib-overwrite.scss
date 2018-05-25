@@ -1,0 +1,392 @@
+/******************************************************
+ ** thirdPartyLib-overwrite.scss
+ ** 
+ ** Overwriting LESS for Third Party lib's CSS.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/******************************
+ * Date Picker Style Overwrite
+ ******************************/
+.bootstrap-datetimepicker-widget {
+  table {
+    td {
+      &.active {
+        background-color: $theme-color;
+        &:hover {
+          background-color: $theme-color;
+        }
+      }
+      span {
+        color: $dark-gray;
+        &.active {
+          background-color: $theme-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .btn[data-action="togglePeriod"] {
+    background-color: $theme-color;
+    border: 1px solid $theme-color;
+  }
+}
+
+/************************************
+ * Date Range Picker Style Overwrite
+ ************************************/
+.daterangepicker {
+  .ranges {
+    li {
+      background-color: $white-color;
+      border-color: $medium-dark-gray;
+      color: $dark-gray;
+      border-radius: 0px;
+      &.active {
+        background: $theme-color none repeat scroll 0 0;
+        border: 1px solid $theme-color;
+        color: $white-color;
+      }
+      &:hover {
+        background: $theme-color none repeat scroll 0 0;
+        border: 1px solid $theme-color;
+        color: $white-color;
+      }
+    }
+  }
+  td {
+    &.active {
+      background-color: $theme-color;
+      color: $white-color;
+      &:hover {
+        background-color: $theme-color;
+        color: $white-color;
+      }
+    }
+    &.in-range {
+      background-color: $extra-light-gray;
+      border-color: transparent;
+      border-radius: 0;
+      color: #000;
+    }
+  }
+  .btn-success {
+    background-color: $theme-color;
+    border :1px solid $theme-color;
+    color: $white-color;
+  }
+  .input-mini {
+    &.active {
+      border: 1px solid $theme-color;
+      border-radius: 0px;
+    }
+  }
+}
+
+/***************************
+ * Select 2 Style Overwrite
+ ***************************/
+.select2-selection--multiple, .select2-container--default .select2-selection--single {
+  border-radius: 0px !important;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: 1px solid $theme-color; 
+}
+.select2-selection__choice, .select2-selection__choice__remove {
+  background-color: $theme-color !important;
+  border: 1px solid $theme-color !important;
+  border-radius: 0px !important;
+  color: $white-color !important;
+}
+
+/****************************
+ * Selectize Style Overwrite
+ ****************************/
+.selectize-control {
+  &.multi {
+    .selectize-input {
+      > div {
+        padding-left:5px;
+        padding-right: 5px;
+        background-color: $theme-color;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+/***************************************
+ * Ihover Image gallery Style Overwrite
+ ***************************************/
+.img-gallery {
+  &.ih-item {
+    &.square {
+      width: 100%;
+    }
+    &.effect4 {
+      a {
+        &:hover {
+          .info {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/********************************
+ * Sortable list Style Overwrite
+ ********************************/
+.ui-sortable {
+  .sortable-dragging, .sortable-dragging * {
+    cursor: move !important;
+  }
+  .sortable-placeholder {
+    border: 2px dotted $dark-gray;
+    background-color: $extra-light-gray;
+  }
+  .list-group-item {
+    min-height: 45px;
+  }
+}
+
+/***************************************
+ * Todo List (Sortable) Style Overwrite
+ ***************************************/
+.todo-sortable {
+  .sortable-placeholder {
+    border: 2px dotted $dark-gray;
+    background-color: $extra-light-gray;
+    min-height: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+/***********************
+ * jQuery contextMenu 
+ * used in File manager
+ ***********************/
+.context-menu-list {
+  &.context-menu-root {
+    padding: 0px;
+    .context-menu-item {
+      padding: 10px 10px 10px 30px;
+      color: $metalic-gray;
+      &.context-menu-icon--fa::before {
+        color: $metalic-gray;
+      }
+      &.context-menu-hover { 
+        border-left: 2px solid $metalic-gray;
+        background-color: $light-gray; 
+      }
+      &.context-menu-not-selectable { 
+        padding: 0px; 
+        margin: 0px; 
+      }
+      &.context-menu-submenu::after {
+        border-color: transparent transparent transparent $metalic-gray;
+        border-width: 5px 0 5px 5px;
+      }
+    }
+  }
+}
+
+/*************************************
+ * Jquery Validation Style Validation
+ *************************************/
+.validate-form {
+  label {
+    &.error {
+      color: #dd4b39;
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+}
+
+/*****************************
+ * Google Map Style Overwrite
+ *****************************/
+.google-road-map {
+  #panel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -180px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+  }
+  #bar {
+    width: 240px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 8px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  #autoc {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/*************************************************
+ * Bootstrap Switch Button (Form Advance Element)
+ *************************************************/
+.switch-button {
+  .dropdown-menu {
+    ul {
+      list-style-type: none;
+      li {
+        a {
+          color: $theme-black-color;
+        }
+      }
+    }
+  }
+}
+
+/***********************************************
+ * Theme Switch (Switch Button) Style Overwrite
+ ***********************************************/
+.bootstrap-switch {
+  .bootstrap-switch-handle-on {
+    &.bootstrap-switch-theme {
+      background: $theme-color;
+      color: $white-color;
+    }
+  }
+}
+
+/***************************************
+ * Product Edit Summernote Modal Dialog
+ ***************************************/
+#product-edit {
+  .note-editor  {
+    .modal-body {
+      margin: 0px 10px;
+    }
+  }
+}
+
+/***************************
+ * .introjs Style Overwrite
+ ***************************/
+.introjs-tooltipReferenceLayer {
+  .introjs-helperNumberLayer {
+    left: 10px;
+  }
+}
+
+
+/************************************
+ * Barcode Generator Style Overwrite
+ ************************************/
+.config {
+  .barcode2D {
+    display: none;
+  }
+}
+.miscCanvas {
+  display: none;
+}
+
+/*********************************
+ * Payment's card Style Overwrite
+ *********************************/
+.card-wrapper { 
+  .jp-card {
+    min-width: 100%;
+  }
+}
+
+/***************************
+ * Dropzone Style Overwrite
+ ***************************/
+.dropzone {
+  min-height: 140px;
+  border: 1px dashed $medium-black;
+  background: $white-color;
+  padding: 20px 20px;
+  font-size: 20px;
+}
+
+/**************************
+ * Pace.js Style Overwrite
+ **************************/
+.pace { 
+  .pace-progress {
+    height: 8px;
+    background: $sidebar-background-color;
+    color: $sidebar-background-color;
+    top: 5px;
+  }
+  .pace-activity {
+    box-shadow: inset 0 0 0 2px $sidebar-background-color, inset 0 0 0 7px $white-color;
+    height: 20px;
+  }
+}
+
+/******************************
+ * Animate-css Style Overwrite
+ ******************************/
+.animate-word {
+  font-size: 9rem;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include animation(hue 60s infinite linear);
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+@media (max-width: 500px) {
+  .mega {
+    font-size: 5rem;
+  }
+}
+
+/**************************
+ * Splitjs Style Overwrite
+ **************************/
+.split-section {
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  .split{
+    @include box-sizing(border-box);
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.split-horizontal {
+      height: 100%;
+      float: left;
+    }
+  }
+}
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  &.gutter-horizontal {
+    background-image: url(../../lib/Split.js/grips/vertical.png);
+    cursor: ew-resize;
+    height: 100%;
+    float: left;
+  }
+  &.gutter-vertical {
+    background-image: url(../../lib/Split.js/grips/horizontal.png);
+    cursor: ns-resize;
+  }
+}

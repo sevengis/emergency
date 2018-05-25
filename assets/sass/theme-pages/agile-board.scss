@@ -1,0 +1,38 @@
+/******************************************************
+ ** agile-board.scss
+ ** 
+ ** LESS for Agile Page.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/**************
+ * Agile Board
+ **************/
+.todo-content-border-right {
+  border-right: 3px solid;
+}
+.todo-content-border-left {
+  border-left: 3px solid;
+}
+.theme-border-color {
+  border-color: $theme-color;
+}
+.primary-border-color { 
+  border-color: $primary-border-color; 
+}
+.danger-border-color { 
+  border-color: $danger-border-color; 
+}
+.info-border-color { 
+  border-color: $info-border-color; 
+}
+.warning-border-color { 
+  border-color: $warning-border-color; 
+}
+.success-border-color { 
+  border-color: $success-border-color; 
+}
+.add-todo {
+  border: 2px dotted;
+  width: 100%;
+}

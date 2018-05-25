@@ -1,0 +1,76 @@
+/******************************************************
+ ** contact.scss
+ ** 
+ ** Less for Contact Card Page.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+ 
+/***************
+ * Primary demo
+ ***************/
+.contact-primary, .contact-secondary {
+  background-color: $white-color;
+  margin-bottom: 30px;
+  @include box-shadow(0px 10px 20px -15px rgba(0,0,0,0.7));
+  @include transition(all .2s ease-in-out);
+  .img-block {
+    .social {
+      width: 100px;
+      i {
+        padding-left: 3px;
+      }
+    }
+  }
+  .contact-info {
+    color: $metalic-gray;
+    .info-block {
+      width: 90%
+    }
+    .detail {
+      margin: 5px 0px;
+      &.name {
+        font-family: $Roboto;
+        font-weight: 300;
+      }
+    }
+  }
+  &:hover {
+    @include transform(scale(1.050));
+  }
+}
+
+/*****************
+ * Tertiary style 
+ *****************/
+.contact-tertiary {
+  background-color: $white-color;
+  margin-bottom: 30px;
+  @include box-shadow(0px 10px 20px -15px rgba(0,0,0,0.7));
+  @include transition(all .2s ease-in-out);
+  .img-block {
+    @include box-shadow(0 15px 34px -34px rgba(0,0,0,.2));
+    .contact-name {
+      font-size: 20px;
+      color: $metalic-gray;
+    }
+  }
+  .contact-info {
+    color: $metalic-gray;
+    .detail {
+      margin: 5px 0px;
+      &.name {
+        font-family: $Roboto;
+        font-weight: 300;
+      }
+    }
+    .social {
+      width: 100px;
+      i {
+        padding-left: 3px;
+      }
+    }
+  }
+  &:hover {
+    @include transform(scale(1.050));
+  }
+}

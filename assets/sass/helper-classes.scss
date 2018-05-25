@@ -1,0 +1,535 @@
+/******************************************************
+ ** Helper-classes.scss
+ ** 
+ ** Helper classes for the theme.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/******************
+ * Generalize CSS
+ ******************/
+body { font-family: $open-sans !important; }
+a { text-decoration: none; }
+
+/****************
+ * Border Helpers
+ ****************/
+.bordered { border: 1px solid $light-gray; }
+.no-border { border: none; }
+.border-t { border-top: 1px solid $light-gray; }
+.border-r { border-right: 1px solid $light-gray; }
+.border-b { border-bottom: 1px solid $light-gray; }
+.border-l { border-left: 1px solid $light-gray; }
+.border-t-b { border-top: 1px solid $light-gray; border-bottom: 1px solid $light-gray; }
+.border-l-r { border-left: 1px solid $light-gray; border-right: 1px solid $light-gray; }
+
+/***********************
+ * Border Radius Helpers
+ ***********************/
+.no-border-radius { border-radius: 0px; }
+.border-r-sm { border-radius: 3px; }
+.border-r-md { border-radius: 6px; }
+.border-r-lg { border-radius: 12px; }
+.border-r-xlg { border-radius: 24px; }
+
+/*******************
+ * Margins Helpers
+ *******************/
+.no-margin { margin: 0px !important; }
+.no-margin-t { margin-top: 0px; }
+.no-margin-r { margin-right: 0px; }
+.no-margin-b { margin-bottom: 0px; }
+.no-margin-l { margin-left: 0px; }
+
+.margin-xs { margin: 5px; }
+.margin-t-xs { margin-top: 5px; }
+.margin-r-xs { margin-right: 5px; }
+.margin-b-xs { margin-bottom: 5px; }
+.margin-l-xs { margin-left: 5px; }
+.margin-t-b-xs { margin-top: 5px; margin-bottom: 5px; }
+.margin-l-r-xs { margin-left: 5px; margin-right: 5px; }
+
+.margin-sm { margin: 10px; }
+.margin-t-sm { margin-top: 10px; }
+.margin-r-sm { margin-right: 10px; }
+.margin-b-sm { margin-bottom: 10px; }
+.margin-l-sm { margin-left: 10px; }
+.margin-t-b-sm { margin-top: 10px; margin-bottom: 10px; }
+.margin-l-r-sm { margin-left: 10px; margin-right: 10px; }
+
+.margin { margin: 15px; }
+.margin-t { margin-top: 15px; }
+.margin-r { margin-right: 15px; }
+.margin-b { margin-bottom: 15px; }
+.margin-l { margin-left: 15px; }
+.margin-t-b { margin-top: 15px; margin-bottom: 15px; }
+.margin-l-r { margin-left: 15px; margin-right: 15px; }
+
+.margin-lg { margin: 20px; }
+.margin-t-lg { margin-top: 20px; }
+.margin-r-lg { margin-right: 20px; }
+.margin-b-lg { margin-bottom: 20px; }
+.margin-l-lg { margin-left: 20px; }
+.margin-t-b-lg { margin-top: 20px; margin-bottom: 20px; }
+.margin-l-r-lg { margin-left: 20px; margin-right: 20px; }
+
+.margin-xlg { margin: 25px; }
+.margin-t-xlg { margin-top: 25px; }
+.margin-r-xlg { margin-right: 25px; }
+.margin-b-xlg { margin-bottom: 25px; }
+.margin-l-xlg { margin-left: 25px; }
+.margin-t-b-xlg { margin-top: 25px; margin-bottom: 25px; }
+.margin-l-r-xlg { margin-left: 25px; margin-right: 25px; }
+
+/******************
+ * Paddings Helpers
+ ******************/
+.no-padding { padding: 0px !important; }
+.no-padding-t { padding-top: 0px; }
+.no-padding-r { padding-right: 0px; }
+.no-padding-b { padding-bottom: 0px; }
+.no-padding-l { padding-left: 0px; }
+
+.padding-xs { padding: 5px; }
+.padding-t-xs { padding-top: 5px; }
+.padding-r-xs { padding-right: 5px; }
+.padding-b-xs { padding-bottom: 5px; }
+.padding-l-xs { padding-left: 5px; }
+.padding-t-b-xs { padding-top: 5px; padding-bottom: 5px; }
+.padding-l-r-xs { padding-left: 5px; padding-right: 5px; }
+
+.padding-sm { padding: 10px; }
+.padding-t-sm { padding-top: 10px; }
+.padding-r-sm { padding-right: 10px; }
+.padding-b-sm { padding-bottom: 10px; }
+.padding-l-sm { padding-left: 10px; }
+.padding-t-b-sm { padding-top: 10px; padding-bottom: 10px; }
+.padding-l-r-sm { padding-left: 10px; padding-right: 10px; }
+
+.padding-md { padding: 15px; }
+.padding-t { padding-top: 15px; }
+.padding-r { padding-right: 15px; }
+.padding-b { padding-bottom: 15px; }
+.padding-l { padding-left: 15px; }
+.padding-t-b { padding-top: 15px; padding-bottom: 15px; }
+.padding-l-r { padding-left: 15px; padding-right: 15px; }
+
+.padding-lg { padding: 20px; }
+.padding-t-lg { padding-top: 20px; }
+.padding-r-lg { padding-right: 20px; }
+.padding-b-lg { padding-bottom: 20px; }
+.padding-l-lg { padding-left: 20px; }
+.padding-t-b-lg { padding-top: 20px; padding-bottom: 20px; }
+.padding-l-r-lg { padding-left: 20px; padding-right: 20px; }
+
+.padding-xlg { padding: 25px; }
+.padding-t-xlg { padding-top: 25px; }
+.padding-r-xlg { padding-right: 25px; }
+.padding-b-xlg { padding-bottom: 25px; }
+.padding-l-xlg { padding-left: 25px; }
+.padding-t-b-xlg { padding-top: 25px; padding-bottom: 25px; }
+.padding-l-r-xlg { padding-left: 25px; padding-right: 25px; }
+
+/*******************
+ * Font/Text Helpers
+ *******************/
+.text-normal { font-weight: 400; }
+.text-bold { font-weight: 700; }
+.text-italic { font-style: italic; }
+.text-strike { text-decoration: line-through; }
+.text-underline { text-decoration: underline; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+.text-caps { text-transform: capitalize; }
+
+/********************
+ * Font Size Helper
+ ********************/
+.font-os-thin { font-family: $open-sans; font-weight: 300; }
+.font-os-bold { font-family: $open-sans; font-weight: 700; }
+.font-os-normal { font-family: $open-sans; font-weight: 500; }
+.font-16 { font-size: 16px; }
+.font-14 { font-size: 14px; }
+.font-12 { font-size: 12px; }
+.font-10 { font-size: 10px; }
+
+.font-roboto-thin { font-family: $Roboto; font-weight: 300; }
+.font-roboto-bold { font-family: $Roboto; font-weight: 700; }
+.font-roboto-normal { font-family: $Roboto; font-weight: 500; }
+
+/*********************
+ * Text Colors Helpers
+ *********************/
+.text-white { color: $white-color; }
+.text-lg { color: $light-gray; }
+.text-mdg { color: $medium-dark-gray; }
+.text-dg { color: $dark-gray; }
+.text-mb { color: $medium-black; }
+.text-mg { color: $metalic-gray; }
+.text-theme { color: $theme-color; } // Sets current theme color.
+.text-primary { color: $primary-color; }
+.text-danger { color: $danger-color; }
+.text-info { color: $info-color; }
+.text-warning { color: $warning-color; }
+.text-success { color: $success-color; }
+
+/**************************
+ * Text Dark Colors Helpers
+ **************************/
+.text-dark-theme { color: $theme-hover-color; }
+.text-dark-primary { color: $primary-border-color; }
+.text-dark-info { color: $info-border-color; }
+.text-dark-success { color: $success-border-color; }
+.text-dark-warning { color: $warning-border-color; }
+.text-dark-danger { color: $danger-border-color; }
+
+/**************************
+ * Background colors Helper
+ **************************/
+.no-bg { background: transparent; }
+.bg-white { background-color: $white-color; }
+.bg-theme { background-color: $theme-color; }
+.bg-primary { background-color: $primary-color; }
+.bg-success { background-color: $success-color; }
+.bg-info { background-color: $info-color; }
+.bg-warning { background-color: $warning-color; }
+.bg-danger { background-color: $danger-color; }
+.bg-lg { background-color: $light-gray; }
+.bg-mdg { background-color: $medium-dark-gray; }
+.bg-dg { background-color: $dark-gray; }
+.bg-mb { background-color: $medium-black; }
+.bg-mg { background-color: $metalic-gray; }
+
+/****************
+ * Height Helpers
+ ****************/
+.height-30 { min-height: 30px; }
+.height-40 { min-height: 40px; }
+.height-50 { min-height: 50px; }
+.height-100 { min-height: 100px; }
+.height-150 { min-height: 150px; }
+.height-200 { min-height: 200px; }
+.height-320 { min-height: 320px; }
+
+/***************
+ * Width Helpers
+ ***************/
+.width-30 { min-width: 30px; }
+.width-40 { min-width: 40px; }
+.width-50 { min-width: 50px; }
+.width-100 { min-width: 100px; }
+.width-150 { min-width: 150px; }
+.width-200 { min-width: 200px; }
+.width-320 { min-width: 320px; }
+
+/********************
+ * Progress bar sizes
+ ********************/
+.progress {
+  &.progress-xxs { height: 2px; }
+  &.progress-xs { height: 5px; }
+  &.progress-sm { height: 10px; }
+  &.progress-md { height: 15px; }
+  .progress-bar-theme {
+    background-color: $theme-color;
+    &.progress-bar-striped {
+       background-image: linear-gradient(45deg,rgba(0,0,0,.10) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.10) 50%,rgba(0,0,0,.10) 75%,transparent 75%,transparent);
+    }
+  }
+}
+
+/*******************
+ * Alignment Helpers
+ *******************/
+.inline-block { display: inline-block; }
+.vertical-middle { vertical-align: middle; }
+.vertical-top { vertical-align: top; }
+
+/****************************************************
+ * Sets Mouse Selection color based on selected theme 
+ ****************************************************/
+::-moz-selection {
+  color: $white-color;
+  background: $theme-color;
+}
+::selection {
+  color: $white-color;
+  background: $theme-color;
+}
+
+/***************************
+ * Avatar responsive classes
+ ***************************/
+.avatar {
+  width: 32px;
+  &.avatar-xxs { width: 16px; }
+  &.avatar-xs { width: 24px; }
+  &.avatar-sm { width: 32px; }
+  &.avatar-md { width: 40px; }
+  &.avatar-lg { width: 64px; }
+  &.avatar-xl { width: 128px; }
+  &.avatar-xxlg { width: 256px; }
+}
+
+/***********************************
+ * Bootstrap Button Style Overwrite
+ ***********************************/
+.btn {
+  border-radius: 0px;
+  position:relative;
+  overflow:hidden;
+  @include transition(all 0.2s ease);
+  z-index:0;
+  &:active, &:focus {
+    outline: none;
+  }
+
+  &.btn-theme {
+    background-color: $theme-color;
+    color: $white-color;
+    &:hover {
+      color: $white-color;
+      background-color: $theme-hover-color;
+    }
+    .badge {
+      background-color: $white-color;
+      color: $theme-color;
+    }
+  }
+
+  /*****************
+   * Raised Buttons
+   ****************/
+  .btn-ink {
+    display: block;
+    position: absolute;
+    background:rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    @include transform(scale(0));
+  }
+  .btn-animate {
+    @include animation(ripple 0.65s linear);
+  }
+
+  /*****************
+   * Button circle
+   ****************/
+  &.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+  }
+  &.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+
+  /******************
+   * Button rounded
+   ******************/
+  &.btn-rounded {
+    border-radius: 50px !important;
+  }
+
+  /******************
+   * Outline button
+   ******************/
+  &.btn-bordered {
+    background-color: transparent;
+    border:1px solid;
+    color: inherit;
+    @include transition(all .5s);
+    &.btn-default {
+      border-color: $medium-dark-gray;
+      color: $dark-gray;
+      &:hover {
+        color: $metalic-gray;
+        background-color: $medium-dark-gray !important;
+      }
+    }
+    &.btn-theme {
+      color: $theme-color;
+      background-color: transparent;
+      border:1px solid;
+      @include transition(all .5s);
+      &:hover {
+        color: $white-color;
+        background-color: $theme-hover-color !important;
+        border-color: $theme-color;
+      }
+    }
+    &.btn-primary {
+      color: $primary-color;
+      &:hover {
+        background-color:$primary-color !important;
+        color: $white-color;
+        border-color: $primary-color;
+      }
+    }
+    &.btn-success {
+      color:$success-color;
+      &:hover {
+        background-color:$success-color !important;
+        color: $white-color;
+        border-color: $success-color;
+      }
+    }
+    &.btn-info {
+      color: $info-color;
+      &:hover {
+        background-color:$info-color !important;
+        color: $white-color;
+        border-color: $info-color;
+      }
+    }
+    &.btn-warning {
+      color: $warning-color;
+      &:hover {
+        background-color:$warning-color !important;
+        color: $white-color;
+        border-color: $warning-color;
+      }
+    }
+    &.btn-danger {
+      color: $danger-color;
+      &:hover {
+        color: $white-color;
+        background-color:$danger-color !important;
+        border-color: $danger-color;
+      }
+    }
+  }
+}
+
+/* Write Comment here */
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    @include transform(scale(2.5));
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    @include transform(scale(2.5));
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    @include transform(scale(2.5));
+  }
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    @include transform(scale(2.5));
+  }
+}
+
+/********************************
+ * Overwrite Form Elements Styles
+ ********************************/
+input, select, textarea {
+  border-radius: 0px;
+  box-shadow: none !important;
+  background-color: transparent;
+  &:focus {
+    border: 1px solid $theme-color;
+    box-shadow: none !important;
+  }
+}
+
+/**********
+ * Badges 
+ **********/
+.badge-theme, .theme-item {
+  background-color: $theme-color;
+  color: $white-color;
+  * {
+    color: $white-color;
+  }
+}
+.theme-item:hover, .item-group:hover {   
+  background-color: $theme-hover-color;
+  a {
+    background-color: $theme-hover-color;
+  }
+  * {
+    color: $white-color;
+  }
+}
+
+/******************************************
+ * Theme Color Panel and fixed-height panel
+ ******************************************/
+.panel {
+  &.panel-theme {
+    border :1px solid $theme-color !important;
+    .panel-heading {
+      background-color: $theme-color !important;
+      color: $white-color;
+    }
+  }
+  .panel-fixed-height {
+    height: 200px;
+    overflow-y: scroll;
+  }
+}
+
+/*********************
+ * Theme color Lable
+ *********************/
+.label {
+  &.label-theme {
+    background-color: $theme-color;
+    color: $white-color;
+  }
+}
+
+/**************************
+ * Bootstrap Tabs Overwrite
+ **************************/
+.nav-tabs {
+  li {
+    &.active {
+      a { border-radius: 0px; }
+    }
+  }
+}
+
+/***************************
+ * Bootstrap Media Overwrite
+ ***************************/
+.media {
+  &.media-sm {
+    .media-body {
+      .media-heading {
+        font-size: 14px;
+        font-family: $Roboto;
+      }
+      p,small {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+/************************
+ * Table Style Overwrite
+ ************************/
+table {
+  tr {
+    td, th {
+      vertical-align: middle;
+    }
+  }
+}

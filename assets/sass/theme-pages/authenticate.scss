@@ -1,0 +1,115 @@
+/************************************************************
+ ** authenticate.scss
+ ** 
+ ** LESS for authentication pages such as Login, Signup etc..
+ ** Developer: Ranpariya - The Development Lab - India
+ ************************************************************/
+
+@import "../_mixin.scss";
+@import "../themes/common-variables.scss";
+
+/************************
+ * Auth Background Image
+ ************************/
+body {
+  color: $dark-gray;
+  background: url(../../images/login_bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;/* For WebKit*/
+  -moz-background-size: cover;/* Mozilla*/
+  -o-background-size: cover;/* Opera*/
+  background-size: cover;/* Generic*/
+  overflow-x: auto;
+}
+
+/********************************
+ * Login/Signup/Lock/Forgot page
+ ********************************/
+.auth-page {
+  opacity: 0; /* Page loader */
+}
+.auth_box {
+  position: absolute;
+  padding-top: 12.5%;
+  width: 100%;
+  .auth_login_bg {
+    @include box-shadow(0 0 10px 7px rgba(0, 0, 0, 0.1));
+    background-image: url(../../images/login_box_bg.png);
+    .bg_img {
+      @include transform(translate(0, 210%));
+    }
+  }
+  .auth_login {
+    background-color: $white-color;
+    padding: 25px;
+    h3 {
+      text-align: center;
+      color: $medium-black;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .auth_socialButtons {
+      a {
+        font-size: 16px;
+      }
+    }
+    .auth_loginOr {
+      position: relative;
+      font-size: 1.2em;
+      color: $dark-gray;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      .auth_hrOr {
+        background-color: $medium-dark-gray;
+        height: 1px;
+        margin-top: 0px !important;
+        margin-bottom: 1px !important;
+      }
+      .auth_spanOr {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -0.6em;
+        margin-left: -1.5em;
+        background-color: white;
+        width: 3em;
+        text-align: center;
+      }
+    }
+    .form-control {
+      height: 40px;
+    }
+    .email_textbox_length {
+      width: 95%;
+    }
+    .btn {
+      border: none;
+      font-weight: 700;
+    }
+    label {
+      font-weight: normal;
+    }
+    .auth_forgotPassword {
+      a {
+        color: $dark-gray;
+      }
+    }
+  }
+  .auth-button {
+    background: $white-color none repeat scroll 0 0;
+    border: 5px solid $light-gray;
+    border-radius: 50%;
+    color: $dark-gray;
+    height: 50px;
+    padding: 11px 0;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+    @include transition(all 500ms ease-in-out 0s);
+    width: 50px;
+    &:hover {
+      @include transform(rotate(450deg));
+    }
+  }
+}

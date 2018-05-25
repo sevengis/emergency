@@ -1,0 +1,57 @@
+/******************************************************
+ ** scrollspy.less
+ ** 
+ ** Less for Scrollspy.
+ ** Developer: Ranpariya - The Development Lab - India
+ ******************************************************/
+
+/************
+ * Scrollspy
+ ************/
+.scrollspy {
+  .nav {
+    .active {
+      font-weight: bold;
+      .nav {
+        display: block;
+      }
+    }
+    .nav {
+      display: none;
+      &:hover {
+        a {
+          font-size: 15px;
+        }
+      }
+      &:focus {
+        a {
+          font-size: 15px;
+        }
+      }
+      .active {
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+    >li {
+      margin-top: -10px !important;
+      >a {
+        &:focus {
+          background-color: transparent !important;
+        }
+        &:hover {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+  .affix {
+    top: 190px;
+  }
+  .boxed-layout {
+    .affix {
+      top: 238px;
+    }
+  }
+}

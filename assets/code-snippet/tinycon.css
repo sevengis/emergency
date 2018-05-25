@@ -1,0 +1,8 @@
+Tinycon.setOptions({
+    width: 7,
+    height: 9,
+    font: '10px arial',
+    color: '#ffffff',
+    background: '#FF0000',
+    fallback: true
+});

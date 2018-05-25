@@ -1,0 +1,25 @@
+/*******************************************************
+ ** strawberry-light-theme.scss
+ ** 
+ ** Main LESS file for Strawberry Light Theme Admin Pages.
+ ** Developer: Ranpariya - The Development Lab - India
+ *******************************************************/
+
+/*********************************************
+ * Generalize CSS.
+ * These can use for global component styling
+ *********************************************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body.strawberry-light-theme {
+  @import "./_variables.scss";
+  @import "../../app.scss";
+}
